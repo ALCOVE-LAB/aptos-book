@@ -1,10 +1,10 @@
 # aptos-book
-![image](https://github.com/user-attachments/assets/1d550b2a-cc22-4483-8e07-1f59fd839c3c)
+![image](https://github.com/user-attachments/assets/b40d2b05-9db5-42f1-a78d-678b3023cb09)
+
 
 ## 使命
 alcove 致力于支持富有才华的开发者，使用 Move 语言构建下一代 Web3 应用。 在 alcove ，创造更多可能。一步创新，一步成就。Make Your Move
 
-![img_2.png](img/img_2.png)
 
 ## Move 开发环境搭建指引
 
@@ -31,5 +31,6 @@ alcove 致力于支持富有才华的开发者，使用 Move 语言构建下一�
 
 ### 新功能:
 
-
 #### Keyless 无私钥登陆，Randomness 链上随机数Dispatchable Fungible Assets
+![image](https://github.com/user-attachments/assets/0e905472-b893-41ce-8287-274ffdda2053)
+
