@@ -13,6 +13,8 @@ alcove 致力于支持富有才华的开发者，使用 Move 语言构建下一�
 
 ## Aptos 官方 SDK & 工具链
 
+---
+
 ### TypeScript SDK 
 
 - 文档: https://aptos.dev/en/build/sdks/ts-sdk
@@ -37,6 +39,8 @@ alcove 致力于支持富有才华的开发者，使用 Move 语言构建下一�
   await aptos.waitForTransaction({ transactionHash: committedTxn.hash });
   console.log(`Committed transaction: ${committedTxn.hash}`);
 ```
+
+---
 
 ### Python SDK
 
@@ -75,10 +79,14 @@ tx_hash = await rest_client.submit_bcs_transaction(signed_transaction)
 print(f"Transaction submitted with hash: {tx_hash}")
 ```
 
+---
+
 ### Golang SDK
 
 - 文档: https://aptos.dev/en/build/sdks/go-sdk
 - 源代码: https://github.com/aptos-labs/aptos-go-sdk
+
+---
 
 ### Rust SDK 
 
@@ -95,15 +103,21 @@ print(f"Transaction submitted with hash: {tx_hash}")
 
 - 源代码: https://github.com/aptos-labs/aptos-rust-sdk
 
+---
+
 ### .Net SDK
 
 - 文档: https://aptos.dev/en/build/sdks/dotnet-sdk
 - 源代码: https://github.com/aptos-labs/aptos-dotnet-sdk
 
+---
+
 ### Wallet Adapter
 
 - 源代码: https://github.com/aptos-labs/aptos-wallet-adapter
 - 示例: https://aptos-labs.github.io/aptos-wallet-adapter/
+
+---
 
 ## 典型DeFi 项目案例
 
