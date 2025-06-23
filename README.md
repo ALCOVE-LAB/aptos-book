@@ -123,10 +123,11 @@ print(f"Transaction submitted with hash: {tx_hash}")
 ## 基础知识概览
 
 ### 1. Aptos 简介：
-- 了解 Aptos 智能合约、数据查询接口、区块链基础设施、SDK、Indexer、Aptos Cli ... 
-    [ Aptos 开始 ](https://aptos.dev/en/build/get-started)
-  
+- 了解 Aptos 智能合约、数据查询接口、区块链基础设施、SDK、Indexer、Aptos Cli ...
+
 <details> 
+  
+<summary>点击展开</summary>
     
 - [智能合约](https://aptos.dev/en/build/smart-contracts)
 - [从 以太坊 到 Aptos 知识表](https://aptos.dev/en/build/get-started/ethereum-cheatsheet)
@@ -142,8 +143,12 @@ print(f"Transaction submitted with hash: {tx_hash}")
    
 ### 2. Aptos 入门开发
 - 下载使用 Aptos Cli 、使用 Typescript SDK 提交交易、使用 Move 编写基本的合约代码
+
+
 <details>
-        
+
+<summary>点击展开</summary>
+
 - [使用 Aptos Cli 创建你的第一个 Move 包](https://aptos.dev/en/build/smart-contracts/create-package)
 - [使用 Aptos Cli 编译你的第一个 Move 包](https://aptos.dev/en/build/smart-contracts/compiling)
 - [使用 Aptos Cli 测试你的第一个 Move 包](https://aptos.dev/en/build/smart-contracts/book/unit-testing)
