@@ -11,8 +11,99 @@ alcove 致力于支持富有才华的开发者，使用 Move 语言构建下一�
 ### 2024残酷共学视频
 
 
-## Aptos 官方SDK&工具链
+## Aptos 官方 SDK & 工具链
 
+### TypeScript SDK 
+
+- 文档: https://aptos.dev/en/build/sdks/ts-sdk
+- npm: https://www.npmjs.com/package/@aptos-labs/ts-sdk
+- 代码库: https://github.com/aptos-labs/aptos-ts-sdk
+
+基础示例 (发送 APT)
+```javascript
+  // Transfer between users
+  const txn = await aptos.transaction.build.simple({
+    sender: alice.accountAddress,
+    data: {
+      function: "0x1::coin::transfer",
+      typeArguments: [APTOS_COIN],
+      functionArguments: [bob.accountAddress, TRANSFER_AMOUNT],
+    },
+  });
+
+  console.log("\n=== Transfer transaction ===\n");
+  const committedTxn = await aptos.signAndSubmitTransaction({ signer: alice, transaction: txn });
+
+  await aptos.waitForTransaction({ transactionHash: committedTxn.hash });
+  console.log(`Committed transaction: ${committedTxn.hash}`);
+```
+
+### Python SDK
+
+- 文档: https://aptos.dev/en/build/sdks/python-sdk
+- pypi: https://pypi.org/project/aptos-sdk/
+- 源代码: https://github.com/aptos-labs/aptos-python-sdk
+
+```
+entry_function = EntryFunction.natural(
+    "0x1::aptos_account",  # Module address and name
+    "transfer",            # Function name
+    [],                    # Type arguments (empty for this function)
+    [
+        # Function arguments with their serialization type
+        TransactionArgument(bob.address(), Serializer.struct),  # Recipient address
+        TransactionArgument(1000, Serializer.u64),              # Amount to transfer (1000 octas)
+    ],
+)
+
+chain_id = await rest_client.chain_id()
+ 
+# Get the sender's current sequence number
+account_data = await rest_client.account(alice.address())
+sequence_number = int(account_data["sequence_number"])
+
+signed_transaction = await rest_client.create_bcs_signed_transaction(
+    alice,                           # Account with the private key
+    TransactionPayload(entry_function),  # The payload from our transaction
+    sequence_number=sequence_number  # Use the same sequence number as before
+)
+ 
+print("Transaction signed successfully")
+
+tx_hash = await rest_client.submit_bcs_transaction(signed_transaction)
+ 
+print(f"Transaction submitted with hash: {tx_hash}")
+```
+
+### Golang SDK
+
+- 文档: https://aptos.dev/en/build/sdks/go-sdk
+- 源代码: https://github.com/aptos-labs/aptos-go-sdk
+
+### Rust SDK 
+
+#### Old
+
+老版本 Rust SDK 和 Aptos Core 结合紧密，可以直接导入 Aptos Core 进行使用
+
+- 文档: https://aptos.dev/en/build/sdks/rust-sdk
+- 源代码: https://github.com/aptos-labs/aptos-core/tree/main/sdk
+
+#### New (Beta)
+
+新版本 Rust SDK 依赖较少，但功能尚未完全，基础功能可用
+
+- 源代码: https://github.com/aptos-labs/aptos-rust-sdk
+
+### .Net SDK
+
+- 文档: https://aptos.dev/en/build/sdks/dotnet-sdk
+- 源代码: https://github.com/aptos-labs/aptos-dotnet-sdk
+
+### Wallet Adapter
+
+- 源代码: https://github.com/aptos-labs/aptos-wallet-adapter
+- 示例: https://aptos-labs.github.io/aptos-wallet-adapter/
 
 ## 典型DeFi 项目案例
 
