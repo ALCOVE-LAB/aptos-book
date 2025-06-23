@@ -13,8 +13,6 @@ alcove 致力于支持富有才华的开发者，使用 Move 语言构建下一�
 
 ## Aptos 官方 SDK & 工具链
 
----
-
 ### TypeScript SDK 
 
 - 文档: https://aptos.dev/en/build/sdks/ts-sdk
