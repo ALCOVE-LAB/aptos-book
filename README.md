@@ -169,7 +169,6 @@ print(f"Transaction submitted with hash: {tx_hash}")
 
 #### Keyless 无私钥登陆，Randomness 链上随机数Dispatchable Fungible Assets
 
-![image](https://github.com/user-attachments/assets/b39a69c7-4f03-42f3-a57d-05e572990c98)
 
 ## 一个快速起项目的方式
 
@@ -232,3 +231,6 @@ my_address = "_"
 3. 🖥️ **前端集成，调用合约函数**
 4. 🧪 **完成页面交互逻辑**
 5. 🚀 **部署上线或提交黑客松作品**
+
+![image](https://github.com/user-attachments/assets/b39a69c7-4f03-42f3-a57d-05e572990c98)
+
